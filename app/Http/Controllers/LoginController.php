@@ -27,5 +27,6 @@ class LoginController extends Controller
             ]);
         }
 
+        $user->createToken('Auth Token')->accessToken;// creates a new personal access token for the $user model with the name 'Auth Token' and returns the plain-text value of the token. 
     }
 }
