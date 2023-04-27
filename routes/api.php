@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();//returns authenticated router
+Route::middleware('auth:api')->get('/user', function (Request $request) {//$request header as the token 
+    return $request->user();//returns authenticated user information
 });
 
 Route::post('/login',[LoginController::class,'login']);
